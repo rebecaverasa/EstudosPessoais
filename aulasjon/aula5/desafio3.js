@@ -1,4 +1,4 @@
-// 2 - Modifique o código utilizando HERANÇA de alguma maneira.
+// 3 - Modifique o código da segunda questão, utilizando ENCAPSULAMENTO de alguma maneira.
 
 class ContaBancaria {
     #senha
