@@ -1,0 +1,33 @@
+---- Imagem docker:
+É um pacote estático e somente de leitura que contém tudo o que é necessário para executar um aplicativo, incluindo o código, bibliotecas, dependências e arquivos de configuração.
+- O que compõe
+
+--- Multi-stage: 
+Você não precisa incluir TUDO na sua imagem final. A imagem final deve conter apenas coisas absolutamente necessárias para rodas a aplicação.
+
+Construção em multiplos estágios. Usa várias instruções FROM no mesmo dockerfile para separar o ambiente de compilação do ambiente de execução. Cada estagio FROM tem uma base image diferente, e cada uma delas é um novo stagio no processo de building. A ultima imagem conterá apenas os artefatos necessarios para rodar a aplicacao.
+Cada Stage cria um artefato. 
+
+-> Exemplo sem usar o multi-stage:
+No primeiro e único Stage temos:
+- Dependencias, build tools (compiler, linter, security scanner, node_modules)
+- Source code (go, C++, Rust)
+- Artefato final.
+Tudo isso se torna a nossa imagem, mas ela é muito pesada.
+
+-> No multi stage, temos 2 estágios.
+O primeiro é igual ao estagio anterior: builder
+- Dependencias, build tools (compiler, linter, security scanner, node_modules)
+- Source code (go, C++, Rust)
+- Artefato final.
+Tudo isso se torna a nossa imagem, mas ela é muito pesada.
+
+O segundo contem apenas: runtime
+- Slim base image (como Alpine)
+- cópia do Artefato final
+Isso se torna a nossa imagem final, super leve.
+
+Principais vantagens:
+1 - redução de tamanho: elimita compiladores, bbliotecas de desenvolvimento e arquivos temporários da imagem final.
+2 - mais segurança: menos pacotes e ferramentas instalados significam uma menor superfície de ataque.
+3 - organização: mantém o fluxo de criação e publicação do software em um único arquivo de configuração.
