@@ -10,6 +10,8 @@ O arquivo `__init__.py` serve para marcar uma pasta como um pacote de módulos e
 
 ## FastAPI
 
+Antes de instalar essa lib, deve instalar a venv dentro da pasta do backend. Com a venv ativada, siga para o primeiro passo.
+
 Primeiros passos: https://fastapi.tiangolo.com/tutorial/first-steps/
 
 ### 1. Instalar as dependências
