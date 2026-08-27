@@ -1,0 +1,64 @@
+-------------------------------------------------Títulos
+
+# Título 1
+## Título 2
+### Título 3
+Quanto mais #, menor o nível do título (até ######).
+
+-------------------------------------------------Ênfase
+
+*itálico* ou _itálico_
+**negrito** ou __negrito__
+***negrito e itálico***
+~~riscado~~
+
+-------------------------------------------------Listas
+
+- item          (lista não ordenada, também aceita * ou +)
+1. item         (lista ordenada)
+   - subitem    (indentação = sub-lista)
+
+-------------------------------------------------Links e imagens
+
+[texto do link](https://exemplo.com)
+![texto alternativo](caminho/da/imagem.png)
+
+-------------------------------------------------Código
+
+`código inline`
+
+```python
+código em bloco, com destaque de sintaxe
+```
+
+-------------------------------------------------Citação
+
+> texto citado
+> pode ter várias linhas
+
+-------------------------------------------------Linha horizontal (separador)
+
+---
+***
+___
+
+-------------------------------------------------Tabelas
+
+| Coluna 1 | Coluna 2 |
+|----------|----------|
+| valor A  | valor B  |
+
+-------------------------------------------------Quebra de linha
+
+Duas linhas em branco = novo parágrafo
+Dois espaços no fim da linha (ou <br>) = quebra de linha simples
+
+-------------------------------------------------Checklist (tarefas)
+
+- [x] tarefa concluída
+- [ ] tarefa pendente
+
+-------------------------------------------------Escapando caracteres
+
+\*não vira itálico\*
+Use \ antes do símbolo para exibi-lo literalmente.
